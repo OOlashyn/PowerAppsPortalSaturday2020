@@ -1,0 +1,25 @@
+{
+  "name": "PPS 2020 PWA Demo",
+  "short_name": "PWA Demo",
+  "scope": "/",
+  "display": "fullscreen",
+  "start_url": "<YOUR_PORTAL_URL>",
+  "url": "<YOUR_PORTAL_URL>",
+  "icons": [
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

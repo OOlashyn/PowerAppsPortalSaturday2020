@@ -1,4 +1,4 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js');
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
@@ -9,16 +9,9 @@ if (workbox) {
 const {registerRoute, NavigationRoute} = workbox.routing;
 const {NetworkOnly} = workbox.strategies;
 
-const CACHE_NAME = 'offline-html';
-// This assumes /offline.html is a URL for your self-contained
-// (no external images or styles) offline page.
-const FALLBACK_HTML_URL = 'offline';
-// Populate the cache with the offline HTML page when the
-// service worker is installed.
 self.addEventListener('install', async (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.add(FALLBACK_HTML_URL))
+    //Initial caching happens here
   );
 });
 
@@ -29,6 +22,7 @@ const navigationHandler = async (params) => {
     return await networkOnly.handle(params);
   } catch (error) {
     // If it fails, return the cached HTML.
+    // or in this case static html
     return new Response(
       `<div style="text-align:center; margin-top:40px;">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg"

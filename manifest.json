@@ -3,8 +3,9 @@
   "short_name": "PWA Demo",
   "scope": "/",
   "display": "fullscreen",
-  "start_url": "<YOUR_PORTAL_URL>",
-  "url": "<YOUR_PORTAL_URL>",
+  "start_url": "https://pwademo2020.powerappsportals.com/",
+  "background_color": "#a832a4",
+  "description": "A simple PWA for PPS2020",
   "icons": [
     {
       "src": "/icon-144x144.png",
